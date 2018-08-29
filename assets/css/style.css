@@ -1,0 +1,19 @@
+body{
+  background-color: #ecf0f1;
+}
+table{
+  background-color: #fff !important;
+}
+td img{
+  width: 30px;
+}
+
+.dm-uploader {
+	border: 0.25rem dashed #E95420;
+	text-align: center;
+}
+.dm-uploader.active {
+	border-color: #E95420;
+
+	border-style: solid;
+}
