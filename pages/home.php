@@ -16,6 +16,7 @@
             $count = 1;
             $files = sortFiles(getAllFiles());
             $fileIcons = getAllFileIcons();
+            if(count($files) > 0){
             foreach ($files as $file):
             $ext = pathinfo($file, PATHINFO_EXTENSION);
             $ext = (in_array($ext.'.svg', $fileIcons)) ? $ext.'.svg' : 'file.svg';
@@ -41,7 +42,20 @@
                   </a>
                 </td>
               </tr>
-            <?php endforeach; ?>
+            <?php 
+            endforeach;
+            }else{ 
+          ?>
+            <tr>
+              <td colspan="4">
+                <div class="card bg-primary">
+                  <div class="card-body text-white text-center">
+                    <strong>No data found</strong>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <?php }?>
         </tbody>
       </table>
     </div>

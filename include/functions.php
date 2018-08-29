@@ -6,7 +6,7 @@ function getAllFiles(){
   if (is_dir($dir)){
     if ($dh = opendir($dir)){
       while (($file = readdir($dh)) !== false){
-        if($file != '.' && $file != '..'){
+        if($file != '.' && $file != '..' && $file != '.gitignore'){
           $files[] = $file;
         }
       }
